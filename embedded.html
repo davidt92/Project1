@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>NGL - embedded</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+</head>
+<body>
+    <script src="ngl.dev.js"></script>
+    <script style="top:100px; left:100px">
+        document.addEventListener( "DOMContentLoaded", function(){
+            stage = new NGL.Stage( "viewport" );
+            stage.loadFile( "rcsb://1crn.mmtf", { defaultRepresentation: true } );
+        } );
+    </script>
+    <div id="viewport" style="position: absolute; top:100px; left:100px; width:1000px; height:500px;"></div>
+</body>
+</html>
