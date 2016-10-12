@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>TEIXE.CAT</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="viewport" content="width=device-width">
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="stylesheet" href="./EM/EM-CSS/estilem.css" type="text/css">
+    <style type="text/css">
+      html
+      {
+        overflow: hidden;
+      }
+    </style>
+</head>
+<body>
+
+    <script src="./JS-PER-TOTS/ngl.dev.js"></script>
+    <script src="./EM/EM-SCRIPT/opcio.tag" type="riot/tag"></script>
+    <script src="./EM/EM-SCRIPT/opciointerior.tag" type="riot/tag"></script>
+    <script src="./EM/EM-SCRIPT/jaja.tag" type="riot/tag"></script>
+
+
+    <script>
+        document.addEventListener( "DOMContentLoaded", function(){
+            stage = new NGL.Stage( "viewport" );
+            stage.loadFile( "rcsb://1crn.mmtf", { defaultRepresentation: true } );
+        } );
+    </script>
+      <div id="fullscreen">
+      <div id="viewport" class="joan"></div>
+      <div class="esquerra" id="esquerra" onmouseover="ampliarEsquerra()" onmouseout="originalEsquerra()">
+        <jaja value="FILE" jo="CASA,Coche,Joan"></jaja>
+        <opcio value="VIEW"></opcio>
+        <opcio value="EXAMPLES"></opcio>
+        <opcio value="PLUGINS"></opcio>
+        <opcio value="HELP"></opcio>
+
+      </div>
+      <div class="dreta" id="dreta" onmouseover="ampliarDreta()" onmouseout="originalDreta()"></div>
+      <button style="position: absolute; right:10px; top: 10px" onclick="enterFullscreen()">Full</button>
+      <script src="./JS-PER-TOTS/interaccio.js"></script>
+    </div>
+      <script src="https://cdn.jsdelivr.net/riot/2.5/riot+compiler.min.js"></script>
+      <script> riot.mount('*') </script>
+      <style type="riot"></style>
+</body>
+</html>

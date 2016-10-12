@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>TEIXE.CAT</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="viewport" content="width=device-width">
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="stylesheet" href="./EMBEDDED/EMBEDDED-CSS/estil.css" type="text/css">
+    <style type="text/css">
+      html
+      {
+        overflow: hidden;
+      }
+    </style>
+</head>
+<body>
+
+    <script src="./JS-PER-TOTS/ngl.dev.js"></script>
+    <script src="./EMBEDDED/EMBEDDED-SCRIPT/opcio1.tag" type="riot/tag"></script>
+    <script>
+        document.addEventListener( "DOMContentLoaded", function(){
+            stage = new NGL.Stage( "viewport" );
+            stage.loadFile( "rcsb://1crn.mmtf", { defaultRepresentation: true } );
+        } );
+    </script>
+
+    <div id="viewport" style="position: absolute; width:97%; height:97%;"></div>
+    <div class="esquerra" id="esquerra" onmouseover="ampliarEsquerra()" onmouseout="originalEsquerra()">
+      <opcio1 value="FILE"></opcio1>
+      <opcio1 value="VIEW"></opcio1>
+      <opcio1 value="EXAMPLES"></opcio1>
+      <opcio1 value="PLUGINS"></opcio1>
+      <opcio1 value="HELP"></opcio1>
+    </div>
+    <div class="dreta" id="dreta" onmouseover="ampliarDreta()" onmouseout="originalDreta()"> </div>
+    <script src="./JS-PER-TOTS/interaccio.js"></script>
+    <script src="https://cdn.jsdelivr.net/riot/2.5/riot+compiler.min.js"></script>
+    <script> riot.mount('*') </script>
+    <style type="riot"></style>
+</body>
+</html>
